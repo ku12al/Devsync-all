@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Submit Project - DevSync</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--=============== NAV STYLES ===============-->
+    <link rel="stylesheet" href="assets/css/navstyles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+</head>
+
+<body>
+    <!-- Same header as other pages -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/logo.png" alt="" class="nav__logo-img">
+                DevSync
+            </a>
+
+            <img src="assets/img/nav-img.png" alt="spider" class="nav__spider">
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="projects.html" class="nav__link active-link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="team.html" class="nav__link">Team</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="schedule.html" class="nav__link">Schedule</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="process.html" class="nav__link">Process</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="leaderboard.html" class="nav__link">Leaderboard</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__buttons">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <a href="login.html" class="button button--ghost">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="projects__container container">
+            <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+
+            <section class="projects section">
+                <div class="section-tabs">
+                    <button class="tab-button" data-tab="accepted">Accepted Projects</button>
+                    <button class="tab-button active" data-tab="submit">Submit Project</button>
+                    <button class="tab-button" data-tab="view">View Projects</button>
+                    <button class="tab-button" data-tab="admin">Admin Panel</button>
+                </div>
+
+                <div id="loadingState" class="loading-container">
+                    <i class='bx bx-loader-alt bx-spin'></i>
+                    <p>Loading...</p>
+                </div>
+
+                <div id="acceptedSection" class="tab-content">
+                    <h2 class="section__title">Accepted Projects</h2>
+                    <div id="acceptedContainer" class="projects-container container">
+                        <!-- Accepted projects will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="submitSection" class="tab-content active">
+                    <h2 class="section__title">Submit Your Project</h2>
+                    <div id="authContainer" class="project-form__container container" style="display: none;">
+                        <!-- Content will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <div id="viewSection" class="tab-content">
+                    <h2 class="section__title">Submitted Projects</h2>
+                    <div id="projectsContainer" class="projects-container container">
+                        <!-- Projects will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="adminSection" class="tab-content">
+                    <h2 class="section__title">Admin Panel</h2>
+                    <div id="adminContainer" class="admin-container container">
+                        <!-- Admin content will be loaded here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/projects.js"></script>
+</body>
+
+</html>

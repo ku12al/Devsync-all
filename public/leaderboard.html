@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--=============== NAV STYLES ===============-->
+    <link rel="stylesheet" href="assets/css/navstyles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/leaderboard.css">
+    <title>DevSync Leaderboard</title>
+</head>
+
+<body>
+    <div class="page-transition">
+        <div class="transition-content">
+            <h2 class="transition-title">Welcome Champion...</h2>
+            <p class="transition-subtitle">View The Dev Rankings</p>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/logo.png" alt="" class="nav__logo-img">
+                DevSync
+            </a>
+
+            <img src="assets/img/nav-img.png" alt="spider" class="nav__spider">
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="projects.html" class="nav__link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="team.html" class="nav__link">Team</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="schedule.html" class="nav__link">Schedule</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="process.html" class="nav__link">Process</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="leaderboard.html" class="nav__link active-link">Leaderboard</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__buttons">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <a href="login.html" class="button button--ghost">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section leaderboard-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section__title">DevSync Leaderboard</h2>
+                    <p class="section__subtitle">Discover top contributors and their achievements</p>
+                </header>
+
+                <!-- Global Stats Dashboard -->
+                <section class="stats-dashboard" aria-label="Global Statistics">
+                    <div class="leaderboard-stats" id="globalStats">
+                        <div class="stat shine-effect">
+                            <i class='bx bx-merge stat-icon'></i>
+                            <h3>0</h3>
+                            <p>Total Merged PRs</p>
+                        </div>
+                        <div class="stat shine-effect">
+                            <i class='bx bx-user-check stat-icon'></i>
+                            <h3>0</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="stat shine-effect">
+                            <i class='bx bx-git-repo-forked stat-icon'></i>
+                            <h3>0</h3>
+                            <p>Registered Repos</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Winners Podium -->
+                <section class="winners-section" aria-label="Top Contributors">
+                    <h3 class="section-subtitle">Top Contributors</h3>
+                    <div class="leaderboard-winners" id="topWinners"></div>
+                </section>
+
+                <!-- Rankings & Filters -->
+                <section class="rankings-section" aria-label="Global Rankings">
+                    <div class="rankings-header">
+                        <h3 class="section-subtitle">Global Rankings</h3>
+                        <div class="leaderboard-search">
+                            <div class="search-wrapper">
+                                <input type="text" id="leaderboardSearch"
+                                    placeholder="Search by username, repository, or points..." class="search-input">
+                                <i class='bx bx-search search-icon'></i>
+                            </div>
+                        </div>
+                        <div class="leaderboard-filters">
+                            <div class="filter-group">
+                                <label for="timeRange" class="filter-label">Time Range:</label>
+                                <select id="timeRange" class="filter-select" aria-label="Select time range">
+                                    <option value="all">All Time</option>
+                                    <option value="month">This Month</option>
+                                    <option value="week">This Week</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <span class="filter-label">Sort by:</span>
+                                <div class="filter-buttons" role="group" aria-label="Ranking criteria">
+                                    <button class="filter-btn active" data-filter="points" aria-pressed="true">
+                                        <i class='bx bx-trophy'></i> Points
+                                    </button>
+                                    <button class="filter-btn" data-filter="prs" aria-pressed="false">
+                                        <i class='bx bx-git-pull-request'></i> Pull Requests
+                                    </button>
+                                    <button class="filter-btn" data-filter="repos" aria-pressed="false">
+                                        <i class='bx bx-git-repo-forked'></i> Repositories
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard List -->
+                    <div class="leaderboard-list-wrapper">
+                        <div class="leaderboard-list" id="leaderboardList">
+                            <div class="loading-state">
+                                <i class='bx bx-loader-alt bx-spin'></i>
+                                <p>Loading leaderboard...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to see more</span>
+            <i class='bx bx-chevron-down'></i>
+        </div>
+    </main>
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/leaderboard.js"></script>
+</body>
+
+</html>

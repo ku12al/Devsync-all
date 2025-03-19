@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - DevSync</title>
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--=============== NAV STYLES ===============-->
+    <link rel="stylesheet" href="assets/css/navstyles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--=============== CHART.JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/logo.png" alt="" class="nav__logo-img">
+                Halloween
+            </a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="projects.html" class="nav__link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="team.html" class="nav__link">Team</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="schedule.html" class="nav__link">Schedule</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="process.html" class="nav__link">Process</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="leaderboard.html" class="nav__link">Leaderboard</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <img src="assets/img/nav-img.png" alt="" class="nav__img">
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="profile section">
+            <div class="profile__container container">
+                <div class="profile__header animate-fade-in">
+                    <div class="profile__cover-wrapper">
+                        <img id="profile-cover" class="profile__cover">
+                        <div class="profile__cover-overlay"></div>
+                    </div>
+                    <div class="profile__user-info">
+                        <img src="" alt="" class="profile__img" id="profile-img">
+                        <div class="profile__data">
+                            <h2 class="profile__name" id="profile-name"></h2>
+                            <p class="profile__bio" id="profile-bio"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile__content">
+                    <div class="profile__details animate-slide-left">
+                        <div class="profile__info">
+                            <h3>Profile Details</h3>
+                            <ul class="profile__list">
+                                <li>
+                                    <i class='bx bx-map'></i>
+                                    <span>Location:</span>
+                                    <span id="profile-location"></span>
+                                </li>
+                                <li>
+                                    <i class='bx bx-building'></i>
+                                    <span>Company:</span>
+                                    <span id="profile-company"></span>
+                                </li>
+                                <li>
+                                    <i class='bx bx-link'></i>
+                                    <span>Website:</span>
+                                    <a id="profile-blog" target="_blank"></a>
+                                </li>
+                                <li>
+                                    <i class='bx bxl-twitter'></i>
+                                    <span>Twitter:</span>
+                                    <span id="profile-twitter"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="profile__stats animate-slide-right">
+                            <h3>GitHub Stats</h3>
+                            <div class="stat__item">
+                                <i class='bx bx-code-block'></i>
+                                <span id="gists">0</span>
+                                <p>Gists</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile__stats">
+                    <div class="stat">
+                        <h3 id="repos">0</h3>
+                        <p>Repositories</p>
+                    </div>
+                    <div class="stat">
+                        <h3 id="followers">0</h3>
+                        <p>Followers</p>
+                    </div>
+                    <div class="stat">
+                        <h3 id="following">0</h3>
+                        <p>Following</p>
+                    </div>
+                </div>
+
+                <section class="pull-requests-section">
+                    <h2 class="section__title">Pull Request Activity</h2>
+                    <div class="pr-timeline" id="prTimeline">
+                        <!-- Pull requests will be dynamically inserted here -->
+                    </div>
+                </section>
+
+                <div class="profile__actions">
+                    <a href="http://localhost:3000/logout" class="button">
+                        <i class='bx bx-log-out button__icon'></i>
+                        Logout
+                    </a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/profile.js"></script>
+</body>
+
+</html>

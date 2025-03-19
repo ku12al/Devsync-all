@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--=============== NAV STYLES ===============-->
+  <link rel="stylesheet" href="assets/css/navstyles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Teams Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'gray-1000': '#000',
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./assets/css/teamStyle.css">
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/logo.png" alt="" class="nav__logo-img">
+        DevSync
+      </a>
+
+      <img src="assets/img/nav-img.png" alt="spider" class="nav__spider">
+
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="projects.html" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="team.html" class="nav__link active-link">Team</a>
+          </li>
+          <li class="nav__item">
+            <a href="schedule.html" class="nav__link">Schedule</a>
+          </li>
+          <li class="nav__item">
+            <a href="process.html" class="nav__link">Process</a>
+          </li>
+          <li class="nav__item">
+            <a href="leaderboard.html" class="nav__link">Leaderboard</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav__buttons">
+        <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-menu'></i>
+        </div>
+        <a href="login.html" class="button button--ghost">Login</a>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <!-- Add Full Team heading -->
+    <h2 class="text-[36px]/[36px] md:text-[85px]/[96px] font-sans tracking-tight mb-16">A conference for builders
+      leading the latest innovations in the AI and developer experience ecosystem.</h2>
+
+    <div class="mt-24 w-full grid-flow-col grid-cols-10 gap-5 space-y-8 md:space-y-16 xl:grid xl:space-y-0">
+      <!-- Left Column - Team Names -->
+      <div class="col-span-4">
+        <div class="sticky top-28 max-w-max">
+          <h2
+            class="text-white max-w-[1056px] font-sans text-[36px]/[36px] font-normal tracking-[-0.04em] md:text-[90px]/[60px] grid-flow-col">
+            <span class="relative">Full Team
+              <span aria-hidden="true"
+                class="absolute right-0 top-0 translate-x-full pl-1 font-mono text-lg font-medium text-gray-500 md:pl-0">(12)</span>
+            </span>
+          </h2>
+          <ul class="mt-20 hidden xl:col-span-3 xl:col-start-1 xl:block" role="list">
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-sarah"
+                data-controls="member-sarah">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Ankita
+                  Priyadarshini Sahoo</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://www.linkedin.com/in/ankita-priyadarshini-sahoo-529517291/" rel="noopener noreferrer"
+                    target="_blank" class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@ankita</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0"
+                aria-controls="member-michael" data-controls="member-michael">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Shubham
+                  Kumar</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://www.linkedin.com/in/shubham-yadav-07199a24b/" rel="noopener noreferrer"
+                    target="_blank" class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@shubham</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-aisha"
+                data-controls="member-aisha">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Sayan
+                  Karmakar</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://www.linkedin.com/in/sayan-karmakar-01239a242/" rel="noopener noreferrer"
+                    target="_blank" class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@cope</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-david"
+                data-controls="member-david">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">David
+                  Rodriguez</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/david-rodriguez" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@david</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-emma"
+                data-controls="member-emma">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Emma
+                  Wilson</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/emma-wilson" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@emma</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-james"
+                data-controls="member-james">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">James
+                  Thompson</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/james-thompson" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@james</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0"
+                aria-controls="member-olivia" data-controls="member-olivia">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Olivia
+                  Martinez</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/olivia-martinez" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@olivia</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0"
+                aria-controls="member-daniel" data-controls="member-daniel">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Daniel
+                  Kim</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/daniel-kim" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@daniel</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0"
+                aria-controls="member-sophia" data-controls="member-sophia">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Sophia
+                  Lee</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/sophia-lee" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@sophia</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-ryan"
+                data-controls="member-ryan">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Ryan
+                  Taylor</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/ryan-taylor" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@ryan</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-zoe"
+                data-controls="member-zoe">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Zoe
+                  Williams</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/zoe-williams" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@zoe</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="max-w-max pt-4">
+              <div class="team_member flex items-baseline gap-2" role="button" tabindex="0" aria-controls="member-alex"
+                data-controls="member-alex">
+                <span aria-hidden="true"
+                  class="cursor-default text-xl transition-opacity duration-200 xl:text-[32px]/[32px] opacity-100">Alex
+                  Johnson</span>
+                <span class="text-md relative top-[1px] font-mono uppercase opacity-60">
+                  <a href="https://linkedin.com/in/alex-johnson" rel="noopener noreferrer" target="_blank"
+                    class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase">
+                    <span>@alex</span>
+                  </a>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column - Team Grid -->
+      <div class="col-span-6 col-start-5">
+        <ul class="grid grid-flow-row grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Team Member 1 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Sarah Johnson" id="member-sarah" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQERV2FwUZu47g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725171654575?e=1747267200&v=beta&t=NOsLu8YPQ_jS_9Y88Kw7dzxZgJkxOi-QcC2G7T6enKg" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Frontend Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Ankita
+                Priyadarshini Sahoo</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://vercel.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Sarah&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Ankita Priyadarshini Sahoo</span>
+            </div>
+          </li>
+
+          <!-- Team Member 2 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Michael Chen" id="member-michael" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://media.licdn.com/dms/image/v2/D5603AQEUKE86bKPmcw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729712003998?e=1747267200&v=beta&t=R3DaXHnAPVuGokaMdinVgL2Q0zVIfL7_mEt3RarOm2o" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Mern Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Shubham
+                Kumar</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://google.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Michael&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Shubham Kumar</span>
+            </div>
+          </li>
+
+          <!-- Team Member 3 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Aisha Patel" id="member-aisha" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQFKpN8odRVOdw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729790108852?e=1747267200&v=beta&t=sSK2SQy3w4cZA7t6cvsx-_6Xoz5IjDWnvZcteZ9TT9k" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Backend Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Sayan
+                Karmakar</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://microsoft.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Aisha&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Sayan Karmakar</span>
+            </div>
+          </li>
+
+          <!-- Team Member 4 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="David Rodriguez" id="member-david" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">David
+                Rodriguez</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://amazon.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=David&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">David Rodriguez</span>
+            </div>
+          </li>
+
+          <!-- Team Member 5 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Emma Wilson" id="member-emma" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Emma
+                Wilson</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://apple.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Emma&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Emma Wilson</span>
+            </div>
+          </li>
+
+          <!-- Team Member 6 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="James Thompson" id="member-james" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">James
+                Thompson</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://netflix.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=James&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">James Thompson</span>
+            </div>
+          </li>
+
+          <!-- Team Member 7 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Olivia Martinez" id="member-olivia" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Olivia
+                Martinez</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://meta.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Olivia&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Olivia Martinez</span>
+            </div>
+          </li>
+
+          <!-- Team Member 8 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Daniel Kim" id="member-daniel" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Daniel
+                Kim</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://adobe.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Daniel&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Daniel Kim</span>
+            </div>
+          </li>
+
+          <!-- Team Member 9 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Sophia Lee" id="member-sophia" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Sophia
+                Lee</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://salesforce.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Sophia&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Sophia Lee</span>
+            </div>
+          </li>
+
+          <!-- Team Member 10 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Ryan Taylor" id="member-ryan" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Ryan
+                Taylor</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://spotify.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Ryan&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Ryan Taylor</span>
+            </div>
+          </li>
+
+          <!-- Team Member 11 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Zoe Williams" id="member-zoe" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Zoe
+                Williams</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://twitter.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Zoe&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Zoe Williams</span>
+              />
+              </a>
+              <span class="grow text-[24px] leading-none">Zoe Williams</span>
+            </div>
+          </li>
+
+          <!-- Team Member 12 -->
+          <li class="transition-all duration-300 ease-[var(--ease-out-circ)] relative block image opacity-100"
+            data-member="Alex Johnson" id="member-alex" role="article">
+            <div class="relative aspect-[280/304] overflow-hidden border border-dashed border-gray-500">
+              <img alt="" draggable="false" loading="lazy" class="h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=500&h=500&fit=crop" />
+              <div
+                class="pointer-events-none absolute inset-0 transition-opacity duration-200 opacity-0 flex items-end justify-center pb-8 text-xl font-medium text-white"
+                style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Full Stack Developer
+              </div>
+              <span aria-hidden="true"
+                class="absolute bottom-1 right-1 hidden cursor-default font-mono text-[10px] uppercase md:text-[13px] xl:block">Alex
+                Johnson</span>
+            </div>
+            <div class="my-5 flex items-center gap-2 xl:hidden">
+              <a href="https://github.com/" rel="noopener noreferrer" target="_blank"
+                class="inline-flex items-center whitespace-nowrap font-mono text-sm uppercase text-gray-1000">
+                <img alt="" loading="lazy" class="relative z-[5] h-8 w-8 rounded-full border border-gray-900"
+                  src="https://api.dicebear.com/6.x/personas/svg?seed=Alex&size=32" />
+              </a>
+              <span class="grow text-[24px] leading-none">Alex Johnson</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Team Names (shown below grid on mobile) -->
+      <div class="left-column-mobile w-full">
+        <h3 class="text-xl font-medium mb-4">Team Members</h3>
+        <ul class="team-names-list" role="list">
+          <li class="max-w-max">
+            <div class="team_member flex items-baseline gap-2" role="button" tabindex="0">
+              <span aria-hidden="true" class="cursor-default text-base transition-opacity duration-200">
+                Sarah Johnson
+              </span>
+              <span class="text-sm font-mono uppercase opacity-60">
+                <a href="https://linkedin.com/in/sarah-johnson" rel="noopener noreferrer" target="_blank">
+                  @sarah
+                </a>
+              </span>
+            </div>
+          </li>
+          <!-- Repeat for other team members -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/team-interactions.js"></script>
+
+  <!--=============== SCROLL REVEAL ===============-->
+  <script src="assets/js/scrollreveal.min.js"></script>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

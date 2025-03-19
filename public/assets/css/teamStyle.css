@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 98vw;
+  width: 98%;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: min(1400px, 98vw); /* Add minimum width */
+  transition: none; /* Prevent any automatic transitions */
+}
+
+/* Add heading styles */
+.container h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: left;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    min-width: unset;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .container h1 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Main grid layout adjustments */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  padding: 1rem;
+}
+
+.image {
+  transition: all 0.3s var(--ease-out-circ);
+}
+
+/* Remove old hover styles */
+.image.selected .pointer-events-none,
+.image:hover .pointer-events-none {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Add fading effect for non-hovered items */
+.has-hover .image:not(:hover):not(.selected),
+.has-hover .team_member:not(.active) span {
+  opacity: 0.3;
+}
+
+/* Show name on hover without blur */
+.image .member-name {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image:hover .member-name,
+.image.selected .member-name {
+  opacity: 1;
+}
+
+.team_member {
+  cursor: default;
+  transition: opacity 0.3s ease;
+}
+
+.team_member.active,
+.team_member:hover {
+  opacity: 1 !important;
+}
+
+/* Add new hover effect styles */
+.grid.has-hover .image:not(:hover) {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.grid.has-hover .team_member:not(.active) {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.grid.has-hover .image:hover,
+.grid.has-hover .team_member.active {
+  opacity: 1 !important;
+}
+
+/* Update hover effect styles */
+.team_member.faded,
+.image.faded {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.team_member.active,
+.image.selected {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease;
+}
+
+/* Add grayscale effect for images */
+.image img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-out;
+}
+
+.image:hover img,
+.image.selected img {
+  filter: grayscale(0%);
+}
+
+/* Social link hover animations */
+.team_member a {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  padding: 0.2em 0.4em;
+}
+
+.team_member a span {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team_member:hover a span,
+.team_member.active a span {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Remove arrow related styles and keep the glow effect */
+.team_member a:hover span,
+.team_member.active a span {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1279px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .left-column-mobile {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .team-names-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .team-names-list .team_member {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (min-width: 1280px) {
+  .left-column-mobile {
+    display: none;
+  }
+}
+
+/* Update grid layout for mobile */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 92%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}
