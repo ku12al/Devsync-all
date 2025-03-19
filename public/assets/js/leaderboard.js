@@ -1,7 +1,9 @@
 // Global stats update
+const server = "https://devsync-all.vercel.app";
+
 async function updateGlobalStats() {
     try {
-        const response = await fetch('http://localhost:3000/api/stats/global');
+        const response = await fetch(`${server}/api/stats/global`);
         const stats = await response.json();
 
         document.querySelector('#globalStats').innerHTML = `
@@ -65,7 +67,7 @@ function searchLeaderboard(searchTerm, users) {
 // Leaderboard update function
 async function updateLeaderboard(timeRange = 'all', filterBy = 'points') {
     try {
-        const response = await fetch('http://localhost:3000/api/leaderboard', {
+        const response = await fetch(`${server}/api/leaderboard`, {
             method: 'GET',
             headers: {
                 'Cache-Control': 'no-cache',

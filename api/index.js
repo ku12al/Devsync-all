@@ -7,8 +7,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const { Octokit } = require("@octokit/rest");
-const User = require("../models/User");
-const Repo = require("../models/Repo");
+const User = require("../models/User.js");
+const Repo = require("../models/Repo.js");
 const MongoStore = require("connect-mongo");
 const PORT = process.env.PORT || 5500;
 
@@ -104,7 +104,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "..")));
 app.use(
   cors({
-    origin: ["https://devsync-all.vercel.app/", "http://127.0.0.1:3000"],
+    origin: ["https://devsync-all.vercel.app", "http://127.0.0.1:3000"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   })

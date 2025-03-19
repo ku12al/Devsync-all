@@ -1,6 +1,8 @@
+const server = "https://devsync-all.vercel.app";
+
 async function fetchUserProfile() {
     try {
-        const response = await fetch('http://localhost:3000/api/user', {
+        const response = await fetch(`${server}/api/user`, {
             credentials: 'include'
         });
         const data = await response.json();
@@ -11,7 +13,7 @@ async function fetchUserProfile() {
         }
 
         // Fetch comprehensive profile data
-        const profileResponse = await fetch(`http://localhost:3000/api/user/profile/${data.user.username}`, {
+        const profileResponse = await fetch(`${server}/api/user/profile/${data.user.username}`, {
             credentials: 'include'
         });
         const profileData = await profileResponse.json();
