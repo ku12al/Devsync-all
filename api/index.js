@@ -172,7 +172,7 @@ passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
 // Auth routes
-app.get("/auth/github", passport.authenticate("github", 
+app.get("api/auth/github", passport.authenticate("github", 
     {
     
      scope: ["user"] 
@@ -180,7 +180,7 @@ app.get("/auth/github", passport.authenticate("github",
     }));
 
 app.get(
-  "/auth/github/callback",
+  "api/auth/github/callback",
   passport.authenticate("github", { failureRedirect: "/login" }),
   (req, res) => {
     res.redirect(process.env.FRONTEND_URL);
