@@ -4,7 +4,7 @@
   "description": "DevSync Open Source Platform",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"node index.js\" \"node index.js\"",
+    "start": "concurrently \"node api/index.js\" \"node api/index.js\"",
     "dev": "concurrently \"nodemon index.js\" \"nodemon index.js\"",
     "frontend": "node index.js",
     "backend": "node index.js"

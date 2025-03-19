@@ -7,8 +7,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const { Octokit } = require("@octokit/rest");
-const User = require("./models/User");
-const Repo = require("./models/Repo");
+const User = require("../models/User");
+const Repo = require("../models/Repo");
 const MongoStore = require("connect-mongo");
 const PORT = process.env.PORT || 5500;
 
