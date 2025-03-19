@@ -104,7 +104,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "..")));
 app.use(
   cors({
-    origin: ["https://sayan-dev731.github.io/devsync-opensource", "http://127.0.0.1:3000"],
+    origin: ["https://devsync-all.vercel.app/", "http://127.0.0.1:3000"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   })
